@@ -11,7 +11,7 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
     "build:ts": "tsc",
-    "build": "electron-builder --win"
+    "build": "electron-builder --win --ia32"
   },
   "keywords": [],
   "author": {
@@ -91,5 +91,13 @@
     "electron-squirrel-startup": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "build": {
+    "files": [
+      "!node_modules/*",
+      "!out/*",
+      "!dist/*",
+      "!src/*"
+    ]
   }
 }
